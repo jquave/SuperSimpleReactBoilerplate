@@ -18,3 +18,5 @@ yarn serve
 That's it.
 
 Does not include redux, feel free to add it in a fork and name it SuperComplicatedReactBoilerplate 🔥
+
+TypeScript version here: https://github.com/jquave/SuperSimpleReactBoilerplate/tree/typescript
