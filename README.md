@@ -15,4 +15,6 @@ yarn
 yarn serve
 ```
 
-That's it. Does not include redux or anything else, feel free to add it in a fork and name it SuperComplicatedReactBoilerplate 🔥
+That's it.
+
+Does not include redux, feel free to add it in a fork and name it SuperComplicatedReactBoilerplate 🔥
