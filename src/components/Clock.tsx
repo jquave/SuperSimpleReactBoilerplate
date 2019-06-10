@@ -1,9 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import TimeLabel from './TimeLabel';
 
-class Clock extends React.Component {
-    constructor() {
-        super();
+class Clock extends React.Component<any, any> {
+    state: any
+    constructor(props: any) {
+        super(props);
         this.state = {date: Date()};
     }
     componentDidMount() {
@@ -15,7 +16,7 @@ class Clock extends React.Component {
             this.setState({...this.state,
                 date: Date()
             });
-        }, 999);
+        }, 500);
     }
     render() {
         return (

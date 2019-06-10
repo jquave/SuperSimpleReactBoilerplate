@@ -1,20 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import App from './components/App';
 import { createBrowserHistory } from 'history';
 const history = createBrowserHistory();
 export default history;
-import styles from "./styles/styles.scss";
+import Styles from "./styles/styles";
+new Styles();
+// Imports styles globally, don't let VSCode convince you that this isnt used :|
 
-const MOUNT_NODE = document.getElementById('app');
-window.t = MOUNT_NODE;
-window.y = "Y";
 const render = () => {
     ReactDOM.render(
         <App />,
-        MOUNT_NODE
+        document.getElementById('app')
     );
 }
 

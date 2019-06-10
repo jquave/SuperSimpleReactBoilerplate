@@ -10,7 +10,7 @@ module.exports = {
         aggregateTimeout: 600,
         poll: 50
     },
-    entry: __dirname + '/src/index.js',
+    entry: __dirname + '/src/index.tsx',
     output: {
       path: __dirname + '/dist/',
       filename: 'bundle.js'
@@ -32,11 +32,17 @@ module.exports = {
                     "css-loader", // translates CSS into CommonJS
                     "sass-loader" // compiles Sass to CSS, using Node Sass by default
                 ]
+            },
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/
             }
-        ]
+        ],
+        
     },
     resolve: {
-      extensions: ['.js', '.jsx'],
+      extensions: ['.js', '.jsx', '.tsx', '.ts'],
       alias: {
         'react-dom': '@hot-loader/react-dom'
       }

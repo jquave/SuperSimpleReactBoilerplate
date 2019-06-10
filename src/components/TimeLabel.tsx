@@ -1,6 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 
-class TimeLabel extends React.Component {
+interface Props {
+    date: Date
+}
+
+class TimeLabel extends React.Component<Props> {
+    props: Props
     render() {
         return (
             <span>
